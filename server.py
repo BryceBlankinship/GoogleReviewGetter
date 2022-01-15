@@ -10,9 +10,9 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 def oops(request: Request):
-    return "Refer to the docs for help at /index.html"
+    return "Refer to the docs for help at /docs"
 
-@app.get("/index.html")
+@app.get("/docs")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
